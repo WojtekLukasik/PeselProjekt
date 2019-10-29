@@ -6,6 +6,7 @@
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/pesel/PESELTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pesel/PESEL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pesel/PESEL.java" afterDir="false" />
@@ -125,7 +126,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572363061810</updated>
-      <workItem from="1572363066300" duration="11306000" />
+      <workItem from="1572363066300" duration="12683000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;First commit&quot;">
       <created>1572368911622</created>
@@ -148,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572369135292</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="lols">
+      <created>1572377572630</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572377572630</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +167,7 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="&quot;First commit&quot;" />
     <MESSAGE value="Add gitignore for IDE settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add gitignore for IDE settings" />
+    <MESSAGE value="lols" />
+    <option name="LAST_COMMIT_MESSAGE" value="lols" />
   </component>
 </project>
