@@ -4,6 +4,36 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
+        int id = 0;
+
+
+        // wyświetlanie głównego komunikatu
+        Scanner input = new Scanner(System.in);
+        System.out.println("Hello! Please type PESEL number which you want to save, type 0 to exit: ");
+        long peselNumber = input.nextLong();
+        while(peselNumber != 0){
+            PESEL pesel = new PESEL(peselNumber);
+            if(pesel.getLen() == 11){
+                if(pesel.isValid(pesel.getDigits())){
+                    // dobry pesel zapisz w strukturze danych razem z id
+                    System.out.println("Typed PESEL number is valid. It will be saved in file after exit.");
+                }else{
+                    System.out.println("Typed PESEL number is not valid. Please try again.");
+                }
+
+            }else if (pesel.getLen() > 11){
+                System.out.println("Typed PESEL number is too long. Please try again.");
+            }else{
+                System.out.println("Typed PESEL number is too short. Please try again.");
+            }
+        }
+
+
+        // pętla sprawdzająca pesele
+            // jeśli pesel jest poprawny zapisz do mapy razem z id
+
+        // po zakończeniu czytania peseli zapisz je do pliku tekstowego
+
 
 
 
