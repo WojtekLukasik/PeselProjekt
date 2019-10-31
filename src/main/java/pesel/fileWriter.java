@@ -4,6 +4,6 @@ import java.util.List;
 
 public class fileWriter {
 
-    List<String> lines
+    //List<String> lines
 
 }
