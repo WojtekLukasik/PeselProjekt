@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af1b683a-4e57-4109-b61f-c689638c9a50" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/pesel/MessagesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pesel/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pesel/Messages.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Arquillian JUnit Test Class" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -169,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572787457834</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="dodanie hashmapy w Messengerze&#10;TODO: stream zwracający strukture danych,">
+      <created>1572788444813</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1572788444813</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +202,7 @@
     <MESSAGE value="lols" />
     <MESSAGE value="zmiana w klasie main, utworzenie klasy fileWriter" />
     <MESSAGE value="dodanie filaSavera, program działa poprawnie&#10;TODO: stream zwracający strukture danych, użycie innej struktury danych niż ArrayList" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodanie filaSavera, program działa poprawnie&#10;TODO: stream zwracający strukture danych, użycie innej struktury danych niż ArrayList" />
+    <MESSAGE value="dodanie hashmapy w Messengerze&#10;TODO: stream zwracający strukture danych," />
+    <option name="LAST_COMMIT_MESSAGE" value="dodanie hashmapy w Messengerze&#10;TODO: stream zwracający strukture danych," />
   </component>
 </project>
