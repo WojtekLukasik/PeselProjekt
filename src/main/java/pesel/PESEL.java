@@ -16,12 +16,13 @@ public class PESEL {
 
     public int[] getDigits(){
         int[] digits = new int[12];
-        int i=10;
+        int i=10, length = 0;
         long peselNumber = this.peselNumber;
-        while(peselNumber > 0){
+        while(length <= 10){
             digits[i] = Math.toIntExact(peselNumber % 10);
             peselNumber = peselNumber / 10;
             i--;
+            length++;
         }
         return digits;
     }

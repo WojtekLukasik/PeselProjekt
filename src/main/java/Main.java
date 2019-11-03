@@ -1,16 +1,17 @@
-import pesel.FileSaver;
+import pesel.Saver;
 import pesel.PESEL;
 import pesel.Messages;
 
 import java.io.IOException;
 import java.util.*;
+import java.util.stream.Collectors;
 
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
         //TreeMap<Integer, Long> validPesels = new TreeMap<Integer, Long>();
-        List<Long> validPessels = new ArrayList<>();
+        List<PESEL> pessels = new ArrayList<>();
         Messages messages = new Messages();
 
         // wyświetlanie głównego komunikatu oraz pobieranie pierwszego numeru
@@ -24,9 +25,10 @@ public class Main {
                 if(pesel.isValid(pesel.getDigits())){
                     // dobry pesel zapisz w strukturze danych razem z id
                     System.out.println(messages.get("ValidMessage"));
-                    validPessels.add(pesel.getPESEL());
+                    pessels.add(pesel);
                 }else{
                     System.out.println(messages.get("NotValidMessage"));
+                    pessels.add(pesel);
                 }
 
             }else if (pesel.getLen() > 11){
@@ -41,25 +43,30 @@ public class Main {
         // po zakończeniu czytania peseli zapisz je do pliku tekstowego
         System.out.println(messages.get("PathMessage"));
         Scanner scanner = new Scanner(System.in);
-        String data = new String();
-        String tokens[] = scanner.nextLine().split(" ");
-        FileSaver fileSaver = new FileSaver(tokens[0]);
+        StringBuilder data = new StringBuilder("");
+        String filePath = scanner.nextLine();
+        Saver fileSaver = new Saver(filePath);
+
+        List<Long> validPessels = pessels.stream()
+                .filter(pesel -> pesel.isValid(pesel.getDigits()))
+                .map(PESEL::getPESEL)
+                .collect(Collectors.toList());
+
         for(Long pesel: validPessels){
-            data += pesel.toString() + "\n";
-            //fileSaver.Write(pesel.toString());
+            data.append(pesel.toString()).append("\n");
         }
-        fileSaver.Write(data);
+        fileSaver.Write(data.toString());
 
         // wypisz poprawne pesele
         System.out.println(messages.get("SavedMessage"));
         validPessels.stream()
-                .forEach(y -> System.out.println(y));
+                .forEach(System.out::println);
 
     }
 
     // metoda do wyłapywania niepoprawności we wpisywanych danych
     // wpisanie czegokolwiek innego niż cyfry nie wysypuje całego programu
-    public static long getNumber(){
+    private static long getNumber(){
         Scanner input = new Scanner(System.in);
         try{
             return input.nextLong();
