@@ -13,13 +13,14 @@ public class Main {
         //TreeMap<Integer, Long> validPesels = new TreeMap<Integer, Long>();
         List<PESEL> pessels = new ArrayList<>();
         Messages messages = new Messages();
+        Scanner scanner = new Scanner(System.in);
 
         // wyświetlanie głównego komunikatu oraz pobieranie pierwszego numeru
         System.out.println(messages.get("Greeter"));
-        long peselNumber = getNumber();
+        String peselNumber = scanner.nextLine();
 
         // główna pętla programu
-        while(peselNumber != 0){
+        while(!peselNumber.equals("0")){
             PESEL pesel = new PESEL(peselNumber);
             if(pesel.getLen() == 11){
                 if(pesel.isValid(pesel.getDigits())){
@@ -33,27 +34,27 @@ public class Main {
 
             }else if (pesel.getLen() > 11){
                 System.out.println(messages.get("TooLongMessage"));
-            }else{
+            }else if (pesel.getLen() < 11){
                 System.out.println(messages.get("TooShortMessage"));
             }
 
             // pobierz kolejny numer
-            peselNumber = getNumber();
+            peselNumber = scanner.nextLine();
         }
         // po zakończeniu czytania peseli zapisz je do pliku tekstowego
         System.out.println(messages.get("PathMessage"));
-        Scanner scanner = new Scanner(System.in);
+
         StringBuilder data = new StringBuilder("");
         String filePath = scanner.nextLine();
         Saver fileSaver = new Saver(filePath);
 
-        List<Long> validPessels = pessels.stream()
+        List<String> validPessels = pessels.stream()
                 .filter(pesel -> pesel.isValid(pesel.getDigits()))
                 .map(PESEL::getPESEL)
                 .collect(Collectors.toList());
 
-        for(Long pesel: validPessels){
-            data.append(pesel.toString()).append("\n");
+        for(String pesel: validPessels){
+            data.append(pesel).append("\n");
         }
         fileSaver.Write(data.toString());
 
@@ -66,16 +67,7 @@ public class Main {
 
     // metoda do wyłapywania niepoprawności we wpisywanych danych
     // wpisanie czegokolwiek innego niż cyfry nie wysypuje całego programu
-    private static long getNumber(){
-        Scanner input = new Scanner(System.in);
-        try{
-            return input.nextLong();
-        }
-        catch(InputMismatchException e){
-            System.out.println(e.getMessage());
-            return 1;
-        }
-    }
+
 
 
 }

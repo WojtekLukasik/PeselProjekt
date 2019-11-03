@@ -4,37 +4,41 @@ import java.util.stream.Stream;
 
 public class PESEL {
 
-    private long peselNumber;
+    private String peselNumber;
 
-    public PESEL(long peselNumber){
+    public PESEL(String peselNumber){
         this.peselNumber = peselNumber;
     }
 
-    public long getPESEL(){
+    public String getPESEL(){
         return peselNumber;
     }
 
     public int[] getDigits(){
         int[] digits = new int[12];
-        int i=10, length = 0;
-        long peselNumber = this.peselNumber;
-        while(length <= 10){
-            digits[i] = Math.toIntExact(peselNumber % 10);
-            peselNumber = peselNumber / 10;
+        int i=10, length = String.valueOf(peselNumber).length();
+        long peselNumber = Long.parseLong(this.peselNumber);
+        while(length > 0){
+            if(peselNumber == 0){
+                digits[i] = 0;
+            }else{
+                digits[i] = Math.toIntExact(peselNumber % 10);
+                peselNumber = peselNumber / 10;
+            }
             i--;
-            length++;
+            length--;
         }
         return digits;
     }
 
     public int getLen(){
-        int length = 0;
-        long check = this.peselNumber;
-        while(check > 0){
-            check = check / 10;
-            length++;
-        }
-        return length;
+//        int length = 0;
+//        long check = this.peselNumber;
+//        while(check > 0){
+//            check = check / 10;
+//            length++;
+//        }
+        return this.peselNumber.length();
     }
 
     public boolean isValid(int[] digits){

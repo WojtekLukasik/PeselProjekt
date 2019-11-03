@@ -10,13 +10,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PESELTests {
 
-    private PESEL peselOne = new PESEL(99051208635L); // poprawny numer
-    private PESEL peselTwo = new PESEL(99051208630L); // błędny numer
+    private PESEL peselOne = new PESEL("99051208635"); // poprawny numer
+    private PESEL peselTwo = new PESEL("99051208630"); // błędny numer
 
     @Test
     void getPESEL() {
-        long peselGetTest = peselOne.getPESEL();
-        assertTrue(peselGetTest == 99051208635L);
+        String peselGetTest = peselOne.getPESEL();
+        assertTrue(peselGetTest.equals("99051208635"));
     }
 
     @Test

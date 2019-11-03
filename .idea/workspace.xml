@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af1b683a-4e57-4109-b61f-c689638c9a50" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pesel/FileSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pesel/Saver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pesel/PESEL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pesel/PESEL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pesel/PESELTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pesel/PESELTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pesel/PESEL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pesel/PESEL.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +129,8 @@
       <workItem from="1572390343936" duration="273000" />
       <workItem from="1572444238088" duration="2916000" />
       <workItem from="1572530724375" duration="3912000" />
-      <workItem from="1572816772252" duration="3942000" />
+      <workItem from="1572816772252" duration="4142000" />
+      <workItem from="1572820978822" duration="2401000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;First commit&quot;">
       <created>1572368911622</created>
@@ -188,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572788799092</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="chyba jest ok">
+      <created>1572820871450</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1572820871450</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +224,7 @@
     <MESSAGE value="dodanie filaSavera, program działa poprawnie&#10;TODO: stream zwracający strukture danych, użycie innej struktury danych niż ArrayList" />
     <MESSAGE value="dodanie hashmapy w Messengerze&#10;TODO: stream zwracający strukture danych," />
     <MESSAGE value="dodanie testu Messengera (XD)&#10;TODO: stream zwracający strukture danych," />
-    <option name="LAST_COMMIT_MESSAGE" value="dodanie testu Messengera (XD)&#10;TODO: stream zwracający strukture danych," />
+    <MESSAGE value="chyba jest ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="chyba jest ok" />
   </component>
 </project>
