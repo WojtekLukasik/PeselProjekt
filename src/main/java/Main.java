@@ -14,7 +14,7 @@ public class Main {
         Messages messages = new Messages();
 
         // wyświetlanie głównego komunikatu oraz pobieranie pierwszego numeru
-        System.out.println(messages.get(0));
+        System.out.println(messages.get("Greeter"));
         long peselNumber = getNumber();
 
         // główna pętla programu
@@ -23,23 +23,23 @@ public class Main {
             if(pesel.getLen() == 11){
                 if(pesel.isValid(pesel.getDigits())){
                     // dobry pesel zapisz w strukturze danych razem z id
-                    System.out.println(messages.get(1));
+                    System.out.println(messages.get("ValidMessage"));
                     validPessels.add(pesel.getPESEL());
                 }else{
-                    System.out.println(messages.get(2));
+                    System.out.println(messages.get("NotValidMessage"));
                 }
 
             }else if (pesel.getLen() > 11){
-                System.out.println(messages.get(3));
+                System.out.println(messages.get("TooLongMessage"));
             }else{
-                System.out.println(messages.get(4));
+                System.out.println(messages.get("TooShortMessage"));
             }
 
             // pobierz kolejny numer
             peselNumber = getNumber();
         }
         // po zakończeniu czytania peseli zapisz je do pliku tekstowego
-        System.out.println("Podaj ścieżkę pliku, do którego mają być zapisane numery PESEL");
+        System.out.println(messages.get("PathMessage"));
         Scanner scanner = new Scanner(System.in);
         String data = new String();
         String tokens[] = scanner.nextLine().split(" ");
@@ -51,7 +51,7 @@ public class Main {
         fileSaver.Write(data);
 
         // wypisz poprawne pesele
-        System.out.println("Zapisane numery PESEL: ");
+        System.out.println(messages.get("SavedMessage"));
         validPessels.stream()
                 .forEach(y -> System.out.println(y));
 
