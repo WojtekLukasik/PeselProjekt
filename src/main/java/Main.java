@@ -1,13 +1,16 @@
+import pesel.FileSaver;
 import pesel.PESEL;
 import pesel.Messages;
 
+import java.io.IOException;
 import java.util.*;
-import java.util.stream.Stream;
+
 
 public class Main {
-    public static void main(String[] args){
-        int id = 0;
-        TreeMap<Integer, Long> validPesels = new TreeMap<Integer, Long>();
+
+    public static void main(String[] args) throws IOException {
+        //TreeMap<Integer, Long> validPesels = new TreeMap<Integer, Long>();
+        List<Long> validPessels = new ArrayList<>();
         Messages messages = new Messages();
 
         // wyświetlanie głównego komunikatu oraz pobieranie pierwszego numeru
@@ -21,7 +24,7 @@ public class Main {
                 if(pesel.isValid(pesel.getDigits())){
                     // dobry pesel zapisz w strukturze danych razem z id
                     System.out.println(messages.get(1));
-                    validPesels.put(++id, pesel.getPESEL());
+                    validPessels.add(pesel.getPESEL());
                 }else{
                     System.out.println(messages.get(2));
                 }
@@ -35,13 +38,22 @@ public class Main {
             // pobierz kolejny numer
             peselNumber = getNumber();
         }
-        System.out.println("Zapisane numery PESEL: ");
-
-        validPesels.stream()
-
-
-
         // po zakończeniu czytania peseli zapisz je do pliku tekstowego
+        System.out.println("Podaj ścieżkę pliku, do którego mają być zapisane numery PESEL");
+        Scanner scanner = new Scanner(System.in);
+        String data = new String();
+        String tokens[] = scanner.nextLine().split(" ");
+        FileSaver fileSaver = new FileSaver(tokens[0]);
+        for(Long pesel: validPessels){
+            data += pesel.toString() + "\n";
+            //fileSaver.Write(pesel.toString());
+        }
+        fileSaver.Write(data);
+
+        // wypisz poprawne pesele
+        System.out.println("Zapisane numery PESEL: ");
+        validPessels.stream()
+                .forEach(y -> System.out.println(y));
 
     }
 
@@ -57,4 +69,6 @@ public class Main {
             return 1;
         }
     }
+
+
 }

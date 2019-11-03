@@ -1,2 +1,4 @@
 Main.class
+pesel\Messages.class
+pesel\fileWriter.class
 pesel\PESEL.class
